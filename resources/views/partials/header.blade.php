@@ -11,7 +11,7 @@
                 <ul class="d-flex text-uppercase gap-4 justify-center align-items-center h-100 fw-bold">
                     @foreach (['characters', 'comics', 'movies', 'tv', 'games', 'videos', 'fans', 'news', 'shop'] as $link)
                     <li>
-                        <a class="{{ Route::currentRouteName() == $link ? 'active' : '' }}" href="{{ route('comics')}}">{{$link}}</a>
+                        <a href="{{ route('comics.index')}}">{{$link}}</a>
                     </li>
                     @endforeach
                 </ul>

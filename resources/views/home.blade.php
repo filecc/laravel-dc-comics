@@ -6,7 +6,7 @@
         <h1>
             _under costruction_
         </h1>
-        <a class="d-block btn btn-primary text-white" href="{{route('comics')}}">Wiew all Comics</a>
+        {{-- <a class="d-block btn btn-primary text-white" href="{{route('home')}}">Wiew all Comics</a> --}}
     </div>
 </main>
 @endsection

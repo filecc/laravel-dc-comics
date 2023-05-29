@@ -36,14 +36,15 @@
                             <small>Art By:</small>
                         </div>
                         <div class="col">
-                            @foreach ($artists as $artist)
+                          {{--   @foreach ($artists as $artist)
                                 @if ($loop->last)
                                     <span>{{ $artist }} </span>
                                 @else
                                     <span>{{ $artist }}, </span>
                                 @endif
 
-                            @endforeach
+                            @endforeach --}}
+                            // artist
                         </div>
                     </div>
                     <div class="row border-bottom gx-0">
@@ -51,13 +52,14 @@
                             <small>Written By:</small>
                         </div>
                         <div class="col">
-                            @foreach ($writers as $writer)
+                           {{--  @foreach ($writers as $writer)
                             @if ($loop->last)
                             <span>{{ $writer }} </span>
                         @else
                             <span>{{ $writer }}, </span>
                         @endif
-                            @endforeach
+                            @endforeach --}}
+                            // Writers
                         </div>
                     </div>
                 </div>
