@@ -18,7 +18,7 @@
             </div>
             <div class="col p-2 text-end">
                 <a href="{{route('comics.create')}}" class="btn btn-primary text-white">
-                    Aggiungi
+                    Add Comic
                 </a>
             </div>
         </div>

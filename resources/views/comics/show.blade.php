@@ -5,7 +5,14 @@
     <main class="bg-white text-white position-relative h-100 py-4 position-relative">
         <img class="comic-detail-thumb shadow" src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
         <div class="container py-3">
-            <a class="text-white btn btn-warning" href="{{route('comics.edit', $comic)}}">Modifica</a>
+            <a class="text-white btn btn-warning" href="{{route('comics.edit', $comic)}}">Update</a>
+            <form class="d-inline" action="{{ route('comics.destroy', $comic) }}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button class="deleteButton btn btn-danger ms-3">Delete</button>
+                <button class="confirmDelete btn btn-danger d-none" type="submit">Yes, delete</button>
+                <button class="undoDelete btn btn-outline-warning d-none">No, cancel.</button>
+            </form>
         </div>
 
         <div class="h-100 container">
