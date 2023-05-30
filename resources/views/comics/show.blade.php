@@ -3,23 +3,26 @@
 @section('content')
     <div class="py-5 bg-primary"></div>
     <main class="bg-white text-white position-relative h-100 py-4 position-relative">
-        <img class="comic-detail-thumb shadow" src="{{ $thumb }}" alt="{{ $title }}">
+        <img class="comic-detail-thumb shadow" src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
+        <div class="container py-3">
+            <a class="text-white btn btn-warning" href="{{route('comics.edit', $comic)}}">Modifica</a>
+        </div>
 
         <div class="h-100 container">
 
             <div class="row">
                 <div class="col-8">
-                    <h3 class="text-uppercase text-fg-dark">{{ $title }}</h3>
+                    <h3 class="text-uppercase text-fg-dark">{{ $comic->title }}</h3>
                     <div class="d-flex justify-content-between align-items-stretch bg-success p-2">
                         <div>
-                            <p class="price m-0 p-0">U.S. Price: <span class="text-white">{{ $price }}</span></p>
+                            <p class="price m-0 p-0">U.S. Price: <span class="text-white">{{ $comic->price }}</span></p>
                         </div>
                         <div>
                             <span class="text-uppercase">available</span>
                             <span class="border-start ps-2 text-uppercase">check availability</span>
                         </div>
                     </div>
-                    <p class="text-dark py-3">{{ $description }}</p>
+                    <p class="text-dark py-3">{{ $comic->description }}</p>
 
 
                 </div>
@@ -70,7 +73,7 @@
                             Series:
                         </div>
                         <div class="col p-2 text-uppercase text-primary">
-                            {{$series}}
+                            {{$comic->series}}
                         </div>
                     </div>
                     <div class="row gx-0 border-bottom">
@@ -78,7 +81,7 @@
                             U.S. Price:
                         </div>
                         <div class="col p-2 text-uppercase">
-                            {{$price}}
+                            {{$comic->price}}
                         </div>
                     </div>
                     <div class="row gx-0 border-bottom">
@@ -86,7 +89,7 @@
                             On Sale Date:
                         </div>
                         <div class="col p-2 text-uppercase">
-                            {{$sale_date}}
+                            {{$comic->sale_date}}
                         </div>
                     </div>
                 </div>
