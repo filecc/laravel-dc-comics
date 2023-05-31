@@ -8,29 +8,48 @@
                 @method('PUT')
                 <div class="mb-3">
                   <label for="title" class="form-label">Title</label>
-                  <input type="text" class="form-control" name="title" value="{{$comic->title}}">
+                  <input type="text" class="form-control  @error('title') is-invalid @enderror" name="title" value="{{$comic->title}}">
+                  @error('title')
+                  <div class="alert alert-danger mt-2">{{ $message }}</div>
+              @enderror
                 </div>
                 <div class="mb-3">
                     <label for="thumb" class="form-label">Image link</label>
-                    <input type="text" class="form-control" name="thumb" value="{{$comic->thumb}}">
+                    <input type="text" class="form-control @error('thumb') is-invalid @enderror" name="thumb" value="{{$comic->thumb}}">
+                    @error('thumb')
+                    <div class="alert alert-danger mt-2">{{ $message }}</div>
+                @enderror
                 </div>
                 <div class="mb-3">
                     <label for="price" class="form-label">Price</label>
-                    <input type="text" class="form-control" name="price" value="{{$comic->price}}">
+                    <input type="text" class="form-control @error('price') is-invalid @enderror" name="price" value="{{$comic->price}}">
+                    @error('price')
+                    <div class="alert alert-danger mt-2">{{ $message }}</div>
+                @enderror
                 </div>
                 <div class="mb-3">
                     <label for="series" class="form-label">Series</label>
-                    <input type="text" class="form-control" name="series" value="{{$comic->series}}">
+                    <input type="text" class="form-control  @error('series') is-invalid @enderror" name="series" value="{{$comic->series}}">
+                    @error('series')
+                    <div class="alert alert-danger mt-2">{{ $message }}</div>
+                @enderror
                 </div>
                 <div class="mb-3">
                     <label for="sale_date" class="form-label">Data Vendita</label>
-                    <input type="date" class="form-control" name="sale_Date" value="{{$comic->sale_date}}">
+                    <input type="text" class="form-control @error('sale_date') is-invalid @enderror" name="sale_date" value="{{$comic->sale_date}}">
+                    @error('sale_date')
+                    <div class="alert alert-danger mt-2">{{ $message }}</div>
+                @enderror
                 </div>
+
                 <div class="mb-3">
                     <label for="description" class="form-label">Description</label>
-                    <textarea class="form-control" name="description" style="height: 100px">
+                    <textarea class="form-control  @error('description') is-invalid @enderror" name="description" style="height: 100px">
                         {{$comic->description}}
                     </textarea>
+                    @error('description')
+                    <div class="alert alert-danger mt-2">{{ $message }}</div>
+                @enderror
 
                   </div>
 
